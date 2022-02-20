@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- -------------- -->
+    <style>
+        .con{
+display: block;
+position: relative;
+padding-left: 35px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 22px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+top: 500px;
+}
+
+/* Hide the browser's default checkbox */
+.con input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.con :hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.con input:checked ~ .checkmark {
+background-color: red;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.con input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="navigation">
+            <div class="nav-brand">
+                <a href="index.html"><img src="image/logo.png" alt=""></a>
+            </div>
+            <div class="nav-input">
+                <button class="catalog"  onclick="myFunction()" >
+                 <img src="image/menu.png" alt=""> <a href="catalog.html">Каталог</a>  
+                </button>
+                <form action="">
+                    <input type="text" placeholder="Найти товар"> <span><a href="result.html"><img src="image/search.png" alt=""></a></span>
+                </form>
+            </div>
+            <div class="nav-pages">
+                <ul>
+                    <li><a href="izbranny.html"> <i class="far fa-heart"></i><h5>Избранное</h5></a></li>
+                    <li><a href="orders.html"> <i class="fas fa-box"></i> <h5>Заказы</h5></a></li>
+                    <li><a href="basket.html"><i class="fas fa-shopping-cart"></i> <h5>Корзина</h5></a></li>
+                </ul>
+            </div>
+            <div class="nav-contact">
+                <img src="image/avatar.png" alt="">
+                <h5>Алексей</h5>
+                <img src="image/down arrow.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="basket">
+        <div class="milk-pages">
+            <ul>
+                <li><a href="index.html">Главная</a></li>>
+                <li><a href="">Корзина</a></li>
+            </ul>
+        </div>
+        <div class="basket-title">
+            <h1>Корзина<sup>3</sup></h1>
+        </div>
+        <form name="form">
+               <div class="con">
+                <input type="checkbox"id="selectAll" name="CheckAll" onclick="SelectAll()" >
+                <span class="checkmark"></span>
+                <input type="checkbox" name="CheckBox" value="checkbox1">
+                <span class="checkmark"></span>
+                <input type="checkbox" name="CheckBox" value="checkbox1">
+                <span class="checkmark"></span>
+                <input type="checkbox" name="CheckBox" value="checkbox1">
+                <span class="checkmark"></span>
+               </div>
+            
+            <!-- <div class="select-all_rus"><input type="checkbox" id="selectAll" name="CheckAll" onclick="SelectAll()" /><h5>Выберить все</h5> <h5>Удалить выбранные</h5></div><br>      -->
+                
+        </form>
+    </div>
+    
+
+    <!-- notes-catalog -->
+    <div id="myDropdown" class="dropdown-content">
+        <div class="catalog-items">
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="milkandegg.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="container">
+        <div class="login">
+            <span class="modal-close">X</span>
+            <div class="title">
+                <h2>Вход</h2>
+            </div>
+            <form action="">
+                <label for="">Телефон</label><br>
+                <input type="text" placeholder="+7 912">
+            </form>
+            <button class="button">
+                Вход
+            </button>
+            <div class="pages">
+                <div class="page-item">
+                    Регистрация
+                </div>
+                <div class="page-item two">
+                    Забыли пароль?
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THE END -->
+    <script src="{% js/app.js %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</body>
+</html>

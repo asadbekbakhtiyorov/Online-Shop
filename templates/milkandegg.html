@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -------------- -->
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="navigation">
+            <div class="nav-brand">
+                <a href="index.html"><img src="image/logo.png" alt=""></a>
+            </div>
+            <div class="nav-input">
+                <button class="catalog"  onclick="myFunction()" >
+                 <img src="image/menu.png" alt=""> <a href="catalog.html">Каталог</a>
+                </button>
+                <form action="">
+                    <input type="text" placeholder="Найти товар"> <span><a href="result.html"><img src="image/search.png" alt=""></a></span>
+                </form>
+            </div>
+            <div class="nav-pages">
+                <ul>
+                    <li><a href="izbranny.html"> <i class="far fa-heart"></i><h5>Избранное</h5></a></li>
+                    <li><a href="orders.html"> <i class="fas fa-box"></i> <h5>Заказы</h5></a></li>
+                    <li><a href="basket.html"><i class="fas fa-shopping-cart"></i> <h5>Корзина</h5></a></li>
+                </ul>
+            </div>
+            <div class="nav-contact">
+                <img src="image/avatar.png" alt="">
+                <h5>Алексей</h5>
+                <img src="image/down arrow.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="milk">
+        <div class="milk-pages">
+            <ul>
+                <li><a href="index.html">Главная</a></li>>
+                <li><a href="catalog.html">Каталог</a></li> >
+                <li><a href=""> Молоко, сыр, яйцо</a></li>
+            </ul>
+        </div>
+        <div class="milk-title">
+            <h1>Молоко, сыр, яйцо</h1>
+        </div>
+        <div class="milk-page">
+            <ul>
+                <li><a href="">Товары нашего производства</a></li>
+                <li><a href="">Полезное питание</a></li>
+                <li><a href="">Без ГМО</a></li>
+            </ul>
+        </div>
+
+        <div class="milk-items">
+            <div class="filter-menu">
+                <button class="filter">
+                    Фильтр
+                </button>
+                <div class="price">
+                    <h5>Цена</h5>
+                    <button>
+                        Очистить
+                    </button>
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="1">&nbsp;--&nbsp;
+                    <input type="text" placeholder="100">
+                </div>
+                <div class="line">
+                    <img src="image/line.png" alt="">
+                </div>
+                <div class="pages">
+                    <ul>
+                        <li>Молоко</li>
+                        <li>Сливки</li>
+                        <li>Яйцо</li>
+                    </ul>
+                </div>
+                <div class="center">
+                    <input type="checkbox"><label for="">Mavjud</label>
+                </div>
+                <button class="button">
+                    Применить
+                </button>
+            </div>
+            <section class="sale">
+                <div class="buttons">
+                    <button class="btn">
+                    Фильтр 4 &nbsp; X
+                    </button>
+                    <button class="btn">
+                    Цена от 99 до 2599 &nbsp; X
+                    </button>
+                    <button class="btn active">
+                        Очистить фильтры &nbsp; X
+                    </button>
+                </div>
+                <div class="sale-items">
+                    {% for m in maxsulot %}
+                     <a href="/butter/{{m.id}}/">
+                     <div class="sale-item">
+                        <div class="img-content">
+                            <i class="far fa-heart"></i>
+                            <h5>-50%</h5>
+                            <img src="{{maxsulot.rasm.url}}" alt="">
+                        </div>
+                        <div class="money">
+                            <div class="left">{{maxsulot.narx}} <p>Karta orqali</p></div>
+                            <div class="right">{{maxsulot.narx}} <p>Naqd</p></div>
+                        </div>
+                        <h4>{{maxsulot.batafsil}}, {{maxsulot.mamlakat}}</h4>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <button class="button">
+                            В корзину
+                        </button>
+                         {% endfor %}
+                    </div>
+                     </a>
+                </div>
+            </section>
+        </div>
+        <div class="milk-all_cards">
+            <a href="">Показать ещё</a>
+        </div>
+       <div class="number-pages_div">
+            <ul class="number-pages">
+            <li><a href=""><<</a></li>
+            <li><a href=""><</a></li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">6</a></li>
+            <li><a href="">7</a></li>
+            <li><a href="">8</a></li>
+            <li><a href="">></a></li>
+            <li><a href="">>></a></li>
+        </ul>
+       </div>
+    </section>
+
+    <!-- notes-catalog -->
+    <div id="myDropdown" class="dropdown-content">
+        <div class="catalog-items">
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="milkandegg.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- modal -->
+    <div class="container">
+        <div class="login">
+            <span class="modal-close">X</span>
+            <div class="title">
+                <h2>Вход</h2>
+            </div>
+            <form action="">
+                <label for="">Телефон</label><br>
+                <input type="text" placeholder="+7 912">
+            </form>
+            <button class="button">
+                Вход
+            </button>
+            <div class="pages">
+                <div class="page-item">
+                    Регистрация
+                </div>
+                <div class="page-item two">
+                    Забыли пароль?
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="background">
+           <div class="items">
+                <div class="footer-brand">
+                    <img src="image/footer-logo.png" alt="">
+                </div>
+                <div class="footer-pages">
+                    <ul>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="image/Social.png" alt="">
+                </div>
+                <div class="footer-con"><img src="image/Frame 156.png" alt=""> </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="{% js/app.js %}"></script>
+</body>
+</html>

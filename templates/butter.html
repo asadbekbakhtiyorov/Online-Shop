@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{mahsulot.nom}}</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -------------- -->
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="navigation">
+            <div class="nav-brand">
+                <a href="index.html"><img src="image/logo.png" alt=""></a>
+            </div>
+            <div class="nav-input">
+                <button class="catalog"  onclick="myFunction()" >
+                 <img src="image/menu.png" alt=""> <a href="catalog.html">Каталог</a>  
+                </button>
+                <form action="">
+                    <input type="text" placeholder="Найти товар"> <span><a href="result.html"><img src="image/search.png" alt=""></a></span>
+                </form>
+            </div>
+            <div class="nav-pages">
+                <ul>
+                    <li><a href="izbranny.html"> <i class="far fa-heart"></i><h5>Избранное</h5></a></li>
+                    <li><a href="orders.html"> <i class="fas fa-box"></i> <h5>Заказы</h5></a></li>
+                    <li><a href="basket.html"><i class="fas fa-shopping-cart"></i> <h5>Корзина</h5></a></li>
+                </ul>
+            </div>
+            <div class="nav-contact">
+                <img src="image/avatar.png" alt="">
+                <h5>Алексей</h5>
+                <img src="image/down arrow.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="butter">
+        <div class="milk-pages">
+            <ul>
+                <li><a href="index.html">Главная</a></li>>
+                <li><a href="">Каталог</a></li> >
+                <li><a href="">{{mahsulot.batafsil}}</a></li>
+            </ul>
+        </div>
+        <div class="butter-title">
+            <h1>{{mahsulot.batafsil}}</h1>
+        </div>
+        <div class="butter-share">
+            <ul>
+                <li>{{mahsulot.id}}</li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="far fa-star"></i></li>
+                <li><i class="far fa-star"ta sharh></i></li>
+                <li><i class=lenght {{maxsulot}}></i></li>
+                <li><a>{{sharhlar|lenght}} ta sharh</a></li>
+                <li><i class="fas fa-share-alt"></i>Поделиться</li>
+                <li><i class="far fa-heart"></i>В избраное</li>
+            </ul>
+        </div>
+        <div class="butter-items">
+            <div class="butter-item">
+                <img src="{{maxsulot.rasm.url}}"style="width:500px" alt="">
+            </div>
+            <div class="butter-item">
+                <div class="item-price">
+                    <div class="price-not">
+                        {{mahsulot.narx}} so`m <br>
+                        <span>Naqt pul</span>
+                    </div>
+                    <div class="price-yes">
+                        {{mahsulot.narx}} so`m <br>
+                        <span>Plastik karta</span>
+                    </div>
+                </div>
+                <div class="shopping-cart">
+                    <button><i class="fas fa-shopping-cart"></i> В корзину</button>
+                </div>
+                <div class="bonus">
+                    <img src="image/smile-gren.png" alt="">
+                    <h5>Вы получаете 10 бонусов</h5>
+                </div>
+                <div class="mute">
+                    <i class="fas fa-volume-mute"></i><h5>Уведомить о снижении цены</h5>
+                </div>
+                <div class="brand">
+                    <h5>{{mahsulot.brend}}</h5>
+                    <h5>ПРОСТОКВАШИНО</h5>
+                </div>
+                <div class="brand two">
+                    <h5>Страна производителя</h5>
+                    <h5>{{mahsulot.mamlakat}}</h5>
+                </div>
+                <div class="brand">
+                    <h5>Упаковка</h5>
+                    <h5>{{maxsulot.vazn}}</h5>
+                </div>
+            </div>
+            <div class="butter-item">
+                <img src="image/butters.png" alt="">
+            </div>
+        </div>
+        <section class="sale">
+            <div class="sale-title">
+                <h2>
+                    С этим товаров покупают
+                </h2>
+            </div>
+            <div class="sale-items">
+                <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/kottakolbasa.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/colbasa.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/sasiski.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/moloko.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="review">
+            <div class="review-title">
+                <h1>Sharhlar</h1>
+            </div>
+            <div class="review-items">
+                <div class="review-stars">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <b>4 из 5</b>
+                    </div>
+                    <div class="reviews">
+                        <p>5</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>1</p>
+                    </div>
+                    <div class="reviews">
+                        <p>4</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>1</p>
+                    </div>
+                    <div class="reviews">
+                        <p>3</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>0</p>
+                    </div>
+                    <div class="reviews">
+                        <p>2</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>0</p>
+                    </div>
+                    <div class="reviews">
+                        <p>1</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="comments">
+                    {% for i in range %}
+                    <div class="comment one">
+                        {{% for j in range{sharh.baho} -%}}
+                        <i class="fas fa-user"></i>{{i.mijoz}} <br>
+                        {% endfor -%}
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <i class="fas fa-star"></i>-->
+                        {{i.sana}} <br> {{i.matn}}
+                    </div>
+                    {% endfor
+                    <form action="='/butter/{{m.id}}/" method="post">{% crf_token %}
+                    <div class="your-review">
+                        Sizning Sharhingiz
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><br> 
+                        <textarea name="sh" id="" placeholder="Sharh qoldiring" ></textarea> <br>
+                        <button class="btn">
+                            Отправить отзыв
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="sale">
+            <div class="sale-title">
+                <h2>
+                    Акции
+                </h2>
+                <button class="button">
+                    Все акции  <img src="image/down arrow.png" alt="">
+                </button>
+            </div>
+            <div class="sale-items">
+                <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                         <img src="image/bline.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/moloko.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/colbasa.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+                 <div class="sale-item">
+                    <div class="img-content">
+                        <i class="far fa-heart"></i>
+                        <h5>-50%</h5>
+                        <img src="image/sasiski.png" alt="">
+                    </div>
+                    <div class="money">
+                        <div class="left">44.50₽ <p>С картой</p></div>
+                        <div class="right">44.50₽ <p>Обычная</p></div>
+                    </div>
+                    <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <button class="button">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- notes-catalog -->
+    <div id="myDropdown" class="dropdown-content">
+        <div class="catalog-items">
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="milkandegg.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="background">
+           <div class="items">
+                <div class="footer-brand">
+                    <img src="image/footer-logo.png" alt="">
+                </div>
+                <div class="footer-pages">
+                    <ul>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="image/Social.png" alt="">
+                </div>
+                <div class="footer-con"><img src="image/Frame 156.png" alt=""> </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- modal -->
+    <div class="container">
+        <div class="login">
+            <span class="modal-close">X</span>
+            <div class="title">
+                <h2>Вход</h2>
+            </div>
+            <form action="">
+                <label for="">Телефон</label><br>
+                <input type="text" placeholder="+7 912">
+            </form>
+            <button class="button">
+                Вход
+            </button>
+            <div class="pages">
+                <div class="page-item">
+                    Регистрация
+                </div>
+                <div class="page-item two">
+                    Забыли пароль?
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THE END -->
+    <script src="{% static js/app.js %}"></script>

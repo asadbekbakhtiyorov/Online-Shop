@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Северёночка</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- -------------- --> 
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="navigation">
+            <div class="nav-brand">
+                <a href="index.html"><img src="image/logo.png" alt=""></a>
+            </div>
+            <div class="nav-input">
+                <button class="catalog"  onclick="myFunction()" >
+                 <img src="image/menu.png" alt=""> <a href="catalog.html">Каталог</a>  
+                </button>
+                <form action="">
+                    <input type="text" placeholder="Найти товар"> <span><a href="result.html"><img src="image/search.png" alt=""></a></span>
+                </form>
+            </div>
+            <div class="nav-pages">
+                <ul>
+                    <li><a href="izbranny.html"> <i class="far fa-heart"></i><h5>Избранное</h5></a></li>
+                    <li><a href="orders.html"> <i class="fas fa-box"></i> <h5>Заказы</h5></a></li>
+                    <li><a href="basket.html"><i class="fas fa-shopping-cart"></i> <h5>Корзина</h5></a></li>
+                </ul>
+            </div>
+            <div class="nav-contact">
+                <img src="image/avatar.png" alt="">
+                <h5>Алексей</h5>
+                <img src="image/down arrow.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!-- notes-catalog -->
+    <div id="myDropdown" class="dropdown-content">
+        <div class="catalog-items">
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="milkandegg.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+            <div class="catalog-item">
+                <ul>
+                    <li><a href="catalog.html">Молоко, сыр, яйцо</a></li>
+                    <li><a href="catalog.html">Хлеб</a></li>
+                    <li><a href="catalog.html">Фрукты и овощи</a></li>
+                    <li><a href="catalog.html">Замороженные продукты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <main id="main">
+        <div class="main-banner">
+            <img src="image/img.png" alt="">
+            <h1>Доставка бесплатно от 1000 ₽</h1>
+        </div>
+    </main>
+    <!-- sale -->
+    <section class="sale">
+        <div class="sale-title">
+            <h2>
+                Акции
+            </h2>
+            <button class="button">
+                Все акции  <img src="image/down arrow.png" alt="">
+            </button>
+        </div>
+        <div class="sale-items">
+            <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                     <img src="image/bline.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/moloko.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/colbasa.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/sasiski.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale">
+        <div class="sale-title">
+            <h2>
+                Новинки
+            </h2>
+            <button class="button">
+                Все новинки  <img src="image/down arrow.png" alt="">
+            </button>
+        </div>
+        <div class="sale-items">
+            <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/kottakolbasa.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/colbasa.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/sasiski.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/moloko.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale">
+        <div class="sale-title">
+            <h2>
+                Покупали раньше
+            </h2>
+            <button class="button">
+                Все покупки  <img src="image/down arrow.png" alt="">
+            </button>
+        </div>
+        <div class="sale-items">
+            <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/kesilgankolbasa.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/sasiski.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/kottakolbasa.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+             <div class="sale-item">
+                <div class="img-content">
+                    <i class="far fa-heart"></i>
+                    <h5>-50%</h5>
+                    <img src="image/moloko.png" alt="">
+                </div>
+                <div class="money">
+                    <div class="left">44.50₽ <p>С картой</p></div>
+                    <div class="right">44.50₽ <p>Обычная</p></div>
+                </div>
+                <h4>Г/Ц Блинчики с мясом вес, Россия</h4>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <button class="button">
+                    В корзину
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Специальные придложение -->
+    <section class="apps">
+        <div class="apps-title">
+            <h1>Специальные предложения</h1>
+        </div>
+        <div class="apps-items">
+            <div class="apps-item"  data-aos="fade-up">
+                <div class="item-description">
+                    <h2>Оформите карту «Северяночка»</h2>
+                    <p>И получайте бонусы при покупке в магазинах и на сайте</p>
+                </div>
+                <div class="item-content">
+                    <img src="image/Карта лояльности-10 1.png" alt="">
+                </div>
+            </div>
+            <div class="apps-item">
+                <div class="pluses">
+                      <img src="image/+.png" alt="">
+                      <img src="image/+.png" alt="">
+                      <img src="image/+.png" alt="">
+                      <img src="image/+.png" alt="">
+                      <img src="image/+.png" alt="">
+                      <img src="image/+.png" alt="">
+                  </div>
+                  <div class="item-moneys">
+                    <img class="rubl" src="image/₽.png" alt="">
+                    <img class="rubl" src="image/₽.png" alt="">
+                    <img class="rubl" src="image/₽.png" alt="">
+                    <img class="rubl" src="image/₽.png" alt="">
+                  </div>
+                  
+                <div class="item-description">
+                    <h2>Оформите карту «Северяночка»</h2>
+                    <p>И получайте бонусы при покупке в магазинах и на сайте</p>
+                </div>
+                <div class="item-content">
+                    <img src="image/73 1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our map -->
+
+    <section class="map">
+        <div class="map-title">
+            <h1>Наши магазины</h1>
+            <ul>
+                <li> <a class="menu active" onclick="sayPi()"> п.Щельяюр </a> </li>  
+                <li> <a class="menu" onclick="sayHi()"> д.Вертеп </a> </li>  
+                <li> <a class="menu" onclick="sayLi()"> с.Краснобор  </a> </li>      
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>  
+                    <script>  
+                     $(document).ready(function() {  
+                      $('ul li a').click(function(){  
+                        $('li a').removeClass("active");  
+                        $(this).addClass("active");  
+                    });  
+                    });  
+                    </script>  
+            </ul>
+        </div>
+        <div class="map-img">
+            <div id="map-card" style="width: 100%"><iframe width="90%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=600&amp;hl=en&amp;q=Manchester+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">fitness tracker</a></iframe></div>
+        </div>
+    </section>
+
+    <!-- Статьи -->
+    <section class="state">
+        <div class="state-title">
+            <h2>
+                Статьи
+            </h2>
+            <button class="button">
+                Все статьи  <img src="image/down arrow.png" alt="">
+            </button>
+        </div>
+        <div class="state-items">
+            <div class="state-item">
+                <img src="image/stopcorona.png" alt="">
+                <h6>05.03.2021</h6>
+                <h5>Режим использования масок и перчаток на территории магазинов</h5>
+                <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                <button class="button">
+                    Подробнее
+                </button>
+            </div>
+             <div class="state-item">
+                <img src="image/priroda.png" alt="">
+                <h6>05.03.2021</h6>
+                <h5>Режим использования масок и перчаток на территории магазинов</h5>
+                <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                <button class="button">
+                    Подробнее
+                </button>
+            </div>
+             <div class="state-item">
+                <img src="image/food.png" alt="">
+                <h6>05.03.2021</h6>
+                <h5>Режим использования масок и перчаток на территории магазинов</h5>
+                <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                <button class="button">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="background">
+           <div class="items">
+                <div class="footer-brand">
+                    <img src="image/footer-logo.png" alt="">
+                </div>
+                <div class="footer-pages">
+                    <ul>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+               <div class="media-footer-app">
+                <div class="footer-contact">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-vk"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-odnoklassniki"></i>
+                </div>
+                <div class="footer-icon"><img src="image/Frame 156.png" alt=""> </div>
+               </div>
+            </div>
+        </div>
+            
+    </footer>
+
+    <div class="mobil-menu">
+        <div class="mobil-pages">
+            <ul>
+                <li><a href="izbranny.html"> <i class="fas fa-bars"></i><h5>Каталог</h5></a></li>
+                <li><a href="izbranny.html"> <i class="far fa-heart"></i><h5>Избранное</h5></a></li>
+                <li><a href="orders.html"> <i class="fas fa-box"></i> <h5>Заказы</h5></a></li>
+                <li><a href="basket.html"><i class="fas fa-shopping-cart"></i> <h5>Корзина</h5></a></li>
+                <li class="login-menu"><a><img src="image/menun-login.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="container">
+        <div class="login">
+            <span class="modal-close">X</span>
+            <div class="title">
+                <h2>Вход</h2>
+            </div>
+            <form action="">
+                <label for="">Телефон</label><br>
+                <input type="text" placeholder="+7 912">
+            </form>
+            <button class="button">
+                Вход
+            </button>
+            <div class="pages">
+                <div class="page-item">
+                    Регистрация
+                </div>
+                <div class="page-item two">
+                    Забыли пароль?
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THE END -->
+    <script src="{% js/app.js %}"></script>
+</body>
+</html>
